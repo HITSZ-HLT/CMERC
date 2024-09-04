@@ -14,9 +14,14 @@
 * CUDA 11.7
 
 ## Preparation
+
+### Training
 1. Download  [**multimodal-features**](https://www.dropbox.com/scl/fo/veblbniqjrp3iv3fs3z6p/AEzkNgWqPHHzldBZ0zEzr2Y?rlkey=yhlr653c0vnvaf1krpdkla36u&e=1&dl=0) 
 2. Save data/iemocap/iemocap_features_roberta.pkl, data/iemocap/IEMOCAP_features.pkl in `data/`; Save meld_features_roberta.pkl, data/meld/MELD_features_raw1.pkl in `data/`. 
-3. Download IEMOCAP_diff.pkl, MELD_diff.pkl from [google drive](https://drive.google.com/drive/folders/1ty0XonRQG-DOyNLASHd9bkothMlBwjI8?usp=sharing), and put them in `caldiff/`
+
+### Evaluation
+1. Download IEMOCAP_checkpoint.pkl, MELD_checkpoint.pkl from [google drive](https://drive.google.com/drive/folders/1ty0XonRQG-DOyNLASHd9bkothMlBwjI8?usp=sharing), and put them in `checkpoints/`
+
 
 ## Training
 
@@ -101,9 +106,6 @@ python -u train_cm.py --base-model 'GRU' --dropout 0.4 --lr 0.0001 --batch-size 
       --courselearning --epoch_ratio 0.4 --scheduler_steps 1
 ```
 
-
-
-
 ## Evaluation
 1. Evaluation CMERC on the M³Net model for the ERC task using the IEMOCAP dataset.
 ```shell
@@ -122,8 +124,8 @@ If you find our work useful for your research, please kindly cite our paper as f
 @inproceedings{tu2024calibrate,
 title = {Multimodal Emotion Recognition Calibration in Conversations},
 author = {Tu, Geng and Xiong, Feng and Liang, Bin and Wang, Hui and Zeng, Xi and and Xu, Ruifeng},
-booktitle = {Proceedings of the 32st ACM International Conference on Multimedia},
-series = {MM '24}
+booktitle = {Proceedings of the 32nd ACM International Conference on Multimedia},
+year = {2024}
 }
 ```
 
